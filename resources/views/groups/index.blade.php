@@ -10,7 +10,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-9">
-                <h1>Список групп</h1>
+                <h1>Список групп - index</h1>
                 <ul>
                     @foreach ($groups as $group)
                         <li><a href="{{ route('groups.show', ['group' => $group]) }}">{{ $group->title }}</a></li>
@@ -22,7 +22,7 @@
                     //print_r(POST);
                     ?>
                 <p class="text-center mt-3">
-                    <a href="{{ route('groups.create') }}">Добавить группу</a>
+                    <a class="btn btn-primary" href="{{ route('groups.create') }}">Добавить группу</a>
                 </p>
             </div>
         </div>

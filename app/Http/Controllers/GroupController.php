@@ -39,8 +39,8 @@ class GroupController extends Controller
         $group->fill($validatedData);
         $group->save();
         $data = json_encode($validatedData);
-        return view('groups.store', compact('data'));
-        //return redirect()->route('groups.index');
+        //return view('groups.store', compact('data'));
+        return redirect()->route('groups.index');
     }
 
     /**

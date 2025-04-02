@@ -8,9 +8,10 @@
     </head>
     <body>
     <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-9">
         <form action="{{ route('groups.store') }}" method="POST">
             @csrf
-        <div class="row">
             <div class="mb-3">
                 <label class="form-label">
                     Название группы<br>
@@ -35,10 +36,14 @@
                 </label>
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Добавить</button>
+                <button type="submit" class="btn btn-success">Добавить</button>
+            </div>
+        </form>
+            </div>
+            <div class="col-md-3">
+                <a class="btn btn-primary" href="/groups">В начало</a>
             </div>
         </div>
-        </form>
     </div>
     </body>
     </html>

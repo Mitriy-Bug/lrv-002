@@ -10,9 +10,11 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-9">
-                <h1>Список групп</h1>
+                <h1>Список групп - store</h1>
                 <ul>
-                        <li>{{ $data }}</li>
+                    @foreach ($groups as $group)
+                        <li><a href="{{ route('groups.show', ['group' => $group]) }}">{{ $group->title }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-md-3">
